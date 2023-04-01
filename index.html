@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>基礎代謝＆消費カロリー計算</title>
+	<link rel="stylesheet" type="text/css" href="./src/css/style.css">
+</head>
+
+<body>
+	<h1>Keisan-kun<br><br>
+		基礎代謝＆消費カロリー計算</h1>
+	<form>
+
+		<!-- body burn -->
+		<label for="gender">性別</label>
+		<select id="gender" name="gender">
+			<option value="male">男性</option>
+			<option value="female">女性</option>
+		</select>
+
+		<label for="age">年齢</label>
+		<input type="number" id="age" name="age" placeholder="年齢を入力してください" required>
+
+		<label for="height">身長(cm)</label>
+		<input type="number" id="height" name="height" placeholder="身長を入力してください" required>
+
+		<label for="weight">体重(kg)</label>
+		<input type="number" id="weight" name="weight" placeholder="体重を入力してください" required>
+
+		<label for="activity-level">活動レベル</label>
+		<select id="activity-level" name="activity-level">
+			<option value="1.2">ほとんど運動しない</option>
+			<option value="1.375">週に1〜3回軽い運動をする</option>
+			<option value="1.55">週に3〜5回中程度の運動をする</option>
+			<option value="1.725">週に6〜7回激しい運動をする</option>
+			<option value="1.9">毎日激しい運動をする</option>
+		</select>
+
+		<!-- submit -->
+		<input type="submit" value="計算する" onclick="calculate(event)">
+	</form>
+
+	<div id="result"></div>
+
+	<!-- js -->
+	<script src="./src/js/script.js"></script>
+</body>
+
+</html>
